@@ -1,10 +1,4 @@
-# Time to augment visual self-supervised learning
-## The CORe50 Environment
-
-<p align="center">
-  <img src="https://github.com/mrernst/timetoaugment/blob/main/img/core50_procedure.jpg" width="1000">
-
-This code accompanies the ICLR paper "Time to augment visual self-supervised learning". It contains all the necessary building blocks to replicate the results reported.
+# temporal self-supervised learning
 
 
 ## Getting started with the code
@@ -98,32 +92,6 @@ python3 main/train.py \
 
 ```
 
-##### Example B) A comparison run with standard SimCLR
-```bash
-python3 main/train.py \
-	--name SimCLR_Exp_0 \                           # specify experiment name
-	--data_root './data/' \                         # specify where you put the CORe50 dataset
-	--contrast 'classic' \                          # choose 'classic' for SimCLR type contrasts
-	--test_every 10 \                               # test every 10 epochs
-	--train_split train_alt_0 \                     # choose the splits for cross-validation (k in range(5))
-	--test_split test_alt_0 \
-	--val_split val_alt_0 \
-
-```
-
-##### Example C) A comparison run with a supervised model
-```bash
-python3 main/train.py \
-	--name Supervised_Exp_0 \                       # specify experiment name
-	--data_root './data/' \                         # specify where you put the CORe50 dataset
-	--contrast 'nocontrast' \                       # choose 'nocontrast' for supervised experiments
-	--main_loss 'supervised' \                      # supervised loss
-	--test_every 10 \                               # test every 10 epochs
-	--train_split train_alt_0 \                     # choose the splits for cross-validation (k in range(5))
-	--test_split test_alt_0 \
-	--val_split val_alt_0 \
-
-```
 
 ## License
 
